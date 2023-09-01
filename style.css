@@ -366,7 +366,7 @@ section .title {
 }
 
 .apropos .apropos-content .left img {
-    height: 400px;
+    height: 600px;
     width: 400px;
     object-fit: cover;
     border-radius: 10px;
