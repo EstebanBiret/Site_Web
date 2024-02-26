@@ -366,10 +366,9 @@ section .title {
 }
 
 .apropos .apropos-content .left img {
-    height: 600px;
-    width: 400px;
+    width: 250px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .apropos .apropos-content .right {
@@ -551,7 +550,7 @@ section .title {
     }
 
     to{
-        width: 82%;
+        width: 90%;
     }
 }
 
@@ -565,7 +564,7 @@ section .title {
     }
 
     to{
-        width: 70%;
+        width: 85%;
     }
 }
 
@@ -593,20 +592,20 @@ section .title {
     }
 
     to{
-        width: 87%;
+        width: 94%;
     }
 }
-.competences-content .right .javaFX::before {
-    animation:filljavafx 4s forwards;
+.competences-content .right .c::before {
+    animation:fillc 4s forwards;
 }
 
-@keyframes filljavafx {
+@keyframes fillc {
     from {
         width: 0%;
     }
 
     to{
-        width: 72%;
+        width: 80%;
     }
 }
 
@@ -745,9 +744,13 @@ section .title {
     margin-left: -300%;
 }
 
+#slide5:checked ~ #slides .inner{
+    margin-left: -400%;
+}
+
 #slides .inner{
     transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-    width: 400%;
+    width: 500%;
     line-height: 0;
     height: 500px;
 }
@@ -785,12 +788,12 @@ section .title {
     font-size: 20px;
     font-weight: 500;
     padding: 10px 15px;
-    margin-left: 62%;
+    margin-left: 55%;
     border-radius: 10px;
     border: 2px solid #c46f0e;
     transition: all 0.7s ease;
     position: relative;
-    bottom:300px;
+    bottom:250px;
 }
 
 .slide #bouton-telecharger2 {
@@ -804,7 +807,7 @@ section .title {
     border: 2px solid #c46f0e;
     transition: all 0.7s ease;
     position: relative;
-    bottom:250px;
+    bottom:300px;
 }
 
 .slide #bouton-telecharger3 {
@@ -818,10 +821,24 @@ section .title {
     border: 2px solid #c46f0e;
     transition: all 0.7s ease;
     position: relative;
-    bottom:270px;
+    bottom:250px;
 }
 
 .slide #bouton-telecharger4 {
+    background: #c46f0e;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 15px;
+    margin-left: 62%;
+    border-radius: 10px;
+    border: 2px solid #c46f0e;
+    transition: all 0.7s ease;
+    position: relative;
+    bottom:270px;
+}
+
+.slide #bouton-telecharger5 {
     background: #c46f0e;
     color: #fff;
     font-size: 20px;
@@ -839,6 +856,12 @@ section .title {
     margin-left: 63%;
     position: relative;
     bottom:360px;
+}
+
+.slide s img {
+    margin-left: 53%;
+    position: relative;
+    bottom:320px;
 }
 
 .slide z img {
@@ -868,7 +891,8 @@ section .title {
 .slide #bouton-telecharger1:hover,
 .slide #bouton-telecharger2:hover,
 .slide #bouton-telecharger3:hover,
-.slide #bouton-telecharger4:hover {
+.slide #bouton-telecharger4:hover,
+.slide #bouton-telecharger5:hover {
     transition: .7s ease;
     background: #000;
 }
@@ -896,17 +920,19 @@ section .title {
 #slide1:checked ~ #controls label:nth-child(2),
 #slide2:checked ~ #controls label:nth-child(3),
 #slide3:checked ~ #controls label:nth-child(4),
-#slide4:checked ~ #controls label:nth-child(1){
+#slide4:checked ~ #controls label:nth-child(5),
+#slide5:checked ~ #controls label:nth-child(6){
     background: url(images/right-arrow.png) no-repeat;
     float: right;
     margin: 0 -70px 0 0;
     display: block;
 }
 
-#slide1:checked ~ #controls label:nth-last-child(1),
-#slide2:checked ~ #controls label:nth-last-child(4),
-#slide3:checked ~ #controls label:nth-last-child(3),
-#slide4:checked ~ #controls label:nth-last-child(2){
+#slide1:checked ~ #controls label:nth-last-child(6),
+#slide2:checked ~ #controls label:nth-last-child(5),
+#slide3:checked ~ #controls label:nth-last-child(4),
+#slide4:checked ~ #controls label:nth-last-child(3),
+#slide5:checked ~ #controls label:nth-last-child(2){
     background: url(images/left-arrow.png) no-repeat;
     float: left;
     margin: 0 0 0 -70px;
@@ -930,7 +956,8 @@ section .title {
 #slide1:checked ~ #bullets label:nth-child(1),
 #slide2:checked ~ #bullets label:nth-child(2),
 #slide3:checked ~ #bullets label:nth-child(3),
-#slide4:checked ~ #bullets label:nth-child(4){
+#slide4:checked ~ #bullets label:nth-child(4),
+#slide5:checked ~ #bullets label:nth-child(5){
     background: #fff;
 }
 
@@ -938,11 +965,13 @@ section .title {
     #slide1:checked ~ #controls label:nth-child(2),
     #slide2:checked ~ #controls label:nth-child(3),
     #slide3:checked ~ #controls label:nth-child(4),
-    #slide4:checked ~ #controls label:nth-child(1),
-    #slide1:checked ~ #controls label:nth-last-child(1),
-    #slide2:checked ~ #controls label:nth-last-child(4),
-    #slide3:checked ~ #controls label:nth-last-child(3),
-    #slide4:checked ~ #controls label:nth-last-child(2) {
+    #slide4:checked ~ #controls label:nth-child(5),
+    #slide5:checked ~ #controls label:nth-child(6),
+    #slide1:checked ~ #controls label:nth-last-child(6),
+    #slide2:checked ~ #controls label:nth-last-child(5),
+    #slide3:checked ~ #controls label:nth-last-child(4),
+    #slide4:checked ~ #controls label:nth-last-child(3),
+    #slide5:checked ~ #controls label:nth-last-child(2) {
        margin: 0;
     }
     #slides {
@@ -950,6 +979,14 @@ section .title {
        margin: 0 auto;
     }
  }
+
+#slides .inner{
+    width: 500%; /* Ajustez la largeur pour inclure le nouvel élément */
+}
+
+#slides .slide{
+    width: 20%; /* Ajustez la largeur pour inclure le nouvel élément */
+}
 
 
 /* Contact */
@@ -1201,8 +1238,7 @@ footer {
 
 @media (max-width: 1104px) {
     .apropos .apropos-content .left img {
-        height: 350px;
-        width: 350px;
+        width: 250px;
     }
     .accueil .accueil-content .text-2 {
         font-size: 60px;
@@ -1388,8 +1424,7 @@ footer {
         font-size: 13px;
     }
     .apropos .apropos-content .left img {
-        height: 280px;
-        width: 280px;
+        width: 100px;
     }
 }
 
