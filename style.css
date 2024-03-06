@@ -462,7 +462,6 @@ section .title {
     margin: 10px 0 7px 0;
 }
 
-
 /* Début css compétences */
 
 .competences .competences-content .column {
@@ -511,192 +510,37 @@ section .title {
     background: none;
 }
 
-.competences .competences-content .right .bars {
-    margin-bottom: 15px;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(4, 120px); /* hauteur des lignes */
+    grid-gap: 50px;
+    padding: 10px;
 }
-
-.competences .competences-content .right .info {
+  
+.grid-item {
+    padding: 20px;
+    text-align: center;
     display: flex;
-    margin-bottom: 5px;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-}
-
-.competences .competences-content .right span {
-    font-weight: 500;
+    background: #c46f0e;
+    color: #fff;
     font-size: 18px;
-}
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #c46f0e;
+    transition: all 0.7s ease;
 
-.competences .competences-content .right .line {
-    height: 10px;
-    width: 100%;
-    background: lightgrey;
-    border-radius: 20px;
-    position: relative;
-}
-
-.competences .competences-content .right .line::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 20px;
-    background: linear-gradient(90deg, rgba(196,111,14,1) 0%, rgba(205,176,65,1) 74%);
-}
-
-.competences-content .right .htmlcssjs::before {
-    animation:fill 4s forwards;
-}
-
-@keyframes fill {
-    from {
-        width: 0%;
-    }
-
-    to{
-        width: 90%;
+    &:hover {
+        color: #c46f0e;
+        background: none;
+        cursor: pointer;
     }
 }
 
-.competences-content .right .php::before {
-    animation:fillphp 4s forwards;
-}
-
-@keyframes fillphp {
-    from {
-        width: 0%;
-    }
-
-    to{
-        width: 85%;
-    }
-}
-
-.competences-content .right .python::before {
-    animation:fillpython 4s forwards;
-}
-
-@keyframes fillpython {
-    from {
-        width: 0%;
-    }
-
-    to{
-        width: 73%;
-    }
-}
-
-.competences-content .right .java::before {
-    animation:filljava 4s forwards;
-}
-
-@keyframes filljava {
-    from {
-        width: 0%;
-    }
-
-    to{
-        width: 94%;
-    }
-}
-.competences-content .right .c::before {
-    animation:fillc 4s forwards;
-}
-
-@keyframes fillc {
-    from {
-        width: 0%;
-    }
-
-    to{
-        width: 80%;
-    }
-}
-
-.competences-content .right .sql::before {
-    animation:fillsql 4s forwards;
-}
-
-@keyframes fillsql {
-    from {
-        width: 0%;
-    }
-
-    to{
-        width: 75%;
-    }
-}
-
-.competences-content .right .unix::before {
-    animation:fillunix 4s forwards;
-}
-
-@keyframes fillunix {
-    from {
-        width: 0%;
-    }
-
-    to{
-        width: 70%;
-    }
-}
-
-.competences-content .right .office::before {
-    animation:filloffice 4s forwards;
-}
-
-@keyframes filloffice {
-    from {
-        width: 0%;
-    }
-
-    to{
-        width: 98%;
-    }
-}
-
-.competences-content .right .iot::before {
-    animation:filliot 4s forwards;
-}
-
-@keyframes filliot {
-    from {
-        width: 0%;
-    }
-
-    to{
-        width: 90%;
-    }
-}
-
-.competences-content .right .gpo::before {
-    animation:fillgpo 4s forwards;
-}
-
-@keyframes fillgpo {
-    from {
-        width: 0%;
-    }
-
-    to{
-        width: 68%;
-    }
-}
-
-.competences-content .right .reseau::before {
-    animation:fillreseau 4s forwards;
-}
-
-@keyframes fillreseau {
-    from {
-        width: 0%;
-    }
-
-    to{
-        width: 75%;
-    }
-}
 
 /* Début css projets */
 
