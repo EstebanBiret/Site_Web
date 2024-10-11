@@ -541,7 +541,6 @@ section .title {
     }
 }
 
-
 /* Début css projets */
 
 .projets .title span {
@@ -1099,7 +1098,7 @@ input[type="submit"]:active{
     opacity: 0.8;
 }
 
-/* footer */
+/* Footer */
 
 footer {
     background: #111;
