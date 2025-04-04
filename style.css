@@ -10,6 +10,8 @@
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
+    scrollbar-width: thin;
+    scrollbar-color: black transparent;
 }
 
 html {
@@ -17,7 +19,7 @@ html {
     overflow-x: hidden;
 }
 
-/*Animation lors du scroll*/
+/* Animation lors du scroll */
 
 .animation {
     transform: translateX(400%);
@@ -45,7 +47,7 @@ html {
     transform: translateX(0);
 }
 
-/* bar de scroll custom */
+/* Barre de scroll custom */
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -64,7 +66,7 @@ html {
 }
 
 
-/* tous les styles similaires */
+/* Choses communes à tout le site */
 
 section {
     padding: 100px 0;
@@ -104,7 +106,29 @@ section .title {
     font-family: 'Ubuntu', sans-serif;
 }
 
-/* Début css NavBar */
+.title span {
+    color: #c46f0e;
+}
+
+.buttons {
+    background: #c46f0e;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid #c46f0e;
+    transition: all 0.7s ease;
+    position: relative;
+
+    &:hover {
+        transition: .7s ease;
+        background: transparent;
+        color: #c46f0e;
+    }
+}
+
+/* NavBar */
 
 .navbar {
     position: fixed;
@@ -205,7 +229,7 @@ section .title {
 }
 
 
-/* Début css accueil */
+/* Accueil */
 
 .accueil {
     display: flex;
@@ -281,25 +305,25 @@ section .title {
     border-radius: 10px;
 }
 
-.accueil .accueil-content a:hover::before{
+.accueil .accueil-content a:hover::before {
     transform: scaleX(1);
     border-radius: 10px;
     transform-origin: left;
 }
 
-.accueil .accueil-content a span{
+.accueil .accueil-content a span {
     display: inline-block;
     z-index: 2;
     border-radius: 10px;
     transition: .5s ease-in-out;
 }
 
-.accueil .accueil-content a:hover span{
+.accueil .accueil-content a:hover span {
     color: white;
     border-radius: 10px;
 }
 
-.accueil .accueil-content a i{
+.accueil .accueil-content a i {
     position: relative;
     display: inline-block;
     width: 2px;
@@ -310,7 +334,7 @@ section .title {
     transition-delay: 0s, 0.5s, 1s;
 }
 
-.accueil .accueil-content a:hover i{
+.accueil .accueil-content a:hover i {
     width: 30px;
     height: 2.75px;
     border-radius: 10px;
@@ -318,7 +342,7 @@ section .title {
     transition-delay: 0s, 1s, 0.5s;
 }
 
-.accueil .accueil-content a i::before{
+.accueil .accueil-content a i::before {
     content: '';
     position: absolute;
     top: 0.5px;
@@ -332,7 +356,7 @@ section .title {
     transition: 1s;
 }
 
-.accueil .accueil-content a:hover i::before{
+.accueil .accueil-content a:hover i::before {
     background: white;
     rotate: 45deg;
     border-radius: 10px;
@@ -360,11 +384,8 @@ section .title {
     transition-delay: 1.5s;
 }
 
-/* ----- Début css à propos ------*/
+/* A propos */
 
-.apropos .title span {
-    color: #c46f0e;
-}
 .apropos .apropos-content .left {
     width: 45%;
 }
@@ -385,42 +406,21 @@ section .title {
     margin-bottom: 10px;
 }
 
-.apropos .apropos-content .right .text span {
-    color: #c46f0e;
-}
-
 .apropos .apropos-content .right p {
     text-align: justify;
 }
 
 .apropos .apropos-content .right a {
     display: inline-block;
-    background: #c46f0e;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 30px;
     margin-top: 40px;
-    border-radius: 10px;
-    border: 2px solid #c46f0e;
-    transition: all 0.7s ease;
 }
 
-.apropos .apropos-content .right a:hover {
-    color: #c46f0e;
-    background: none;
-}
-
-/* Début css passions */
+/* Passions */
 
 .passions,
 .projets {
     color: #fff;
     background: #111;
-}
-
-.passions .title span {
-    color: #c46f0e;
 }
 
 .passions .serv-content .card {
@@ -461,14 +461,10 @@ section .title {
     margin: 10px 0 7px 0;
 }
 
-/* Début css compétences */
+/* Compétences */
 
 .competences .competences-content .column {
     width: calc(50% - 80px);
-}
-
-.competences .title span {
-    color: #c46f0e;
 }
 
 .competences .competences-content .left .text {
@@ -493,58 +489,26 @@ section .title {
 
 .competences .competences-content .left a {
     display: inline-block;
-    background: #c46f0e;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
     margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid #c46f0e;
-    transition: all 0.7s ease;
-}
-
-.competences .competences-content .left a:hover {
-    color: #c46f0e;
-    background: none;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: repeat(4, 120px); /* hauteur des lignes */
+    grid-template-rows: repeat(4, 120px);
     grid-gap: 50px;
     padding: 10px;
 }
   
 .grid-item {
-    padding: 20px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #c46f0e;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
     margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid #c46f0e;
-    transition: all 0.7s ease;
-
-    &:hover {
-        color: #c46f0e;
-        background: none;
-        cursor: pointer;
-    }
 }
 
-/* Début css projets */
-
-.projets .title span {
-    color: #c46f0e;
-}
+/* Projets */
 
 #slider{
     margin:0 auto;
@@ -634,101 +598,33 @@ section .title {
 }
 
 .slide #bouton-telecharger1 {
-    background: #c46f0e;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 15px;
-    margin-left: 55%;
-    border-radius: 10px;
-    border: 2px solid #c46f0e;
-    transition: all 0.7s ease;
-    position: relative;
     bottom:290px;
+    margin-left: 55%;
 }
 
 .slide #bouton-telecharger2 {
-    background: #c46f0e;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 15px;
-    margin-left: 60%;
-    border-radius: 10px;
-    border: 2px solid #c46f0e;
-    transition: all 0.7s ease;
-    position: relative;
     bottom:180px;
-}
-
-.slide #bouton-telecharger25 {
-    background: #c46f0e;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 15px;
     margin-left: 60%;
-    border-radius: 10px;
-    border: 2px solid #c46f0e;
-    transition: all 0.7s ease;
-    position: relative;
-    bottom:260px;
 }
 
 .slide #bouton-telecharger3 {
-    background: #c46f0e;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 15px;
-    margin-left: 62%;
-    border-radius: 10px;
-    border: 2px solid #c46f0e;
-    transition: all 0.7s ease;
-    position: relative;
     bottom:300px;
+    margin-left: 62%;
 }
 
 .slide #bouton-telecharger4 {
-    background: #c46f0e;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 15px;
-    margin-left: 62%;
-    border-radius: 10px;
-    border: 2px solid #c46f0e;
-    transition: all 0.7s ease;
-    position: relative;
     bottom:250px;
+    margin-left: 62%;
 }
 
 .slide #bouton-telecharger5 {
-    background: #c46f0e;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 15px;
-    margin-left: 62%;
-    border-radius: 10px;
-    border: 2px solid #c46f0e;
-    transition: all 0.7s ease;
-    position: relative;
     bottom:270px;
+    margin-left: 62%;
 }
 
 .slide #bouton-telecharger6 {
-    background: #c46f0e;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 15px;
-    margin-left: 62%;
-    border-radius: 10px;
-    border: 2px solid #c46f0e;
-    transition: all 0.7s ease;
-    position: relative;
     bottom:210px;
+    margin-left: 62%;
 }
 
 .slide a img {
@@ -746,7 +642,7 @@ section .title {
 .slide m img {
     margin-left: 60%;
     position: relative;
-    bottom:330px;
+    bottom: 260px;
 }
 
 .slide z img {
@@ -775,16 +671,14 @@ section .title {
 
 .slide #bouton-telecharger1:hover,
 .slide #bouton-telecharger2:hover,
-.slide #bouton-telecharger25:hover,
 .slide #bouton-telecharger3:hover,
 .slide #bouton-telecharger4:hover,
 .slide #bouton-telecharger5:hover,
 .slide #bouton-telecharger6:hover {
-    transition: .7s ease;
-    background: #000;
+   color: #fff;
 }
 
-#controls{
+#controls {
     margin: -28% 0 0 0;
     width: 100%;
     height: 50px;
@@ -792,16 +686,16 @@ section .title {
     position: relative;
 }
 
-#controls label{
+#controls label {
     transition: opacity 0.2s ease-out;
     display: none;
     width: 50px;
     height: 50px;
     opacity: .5;
-}
 
-#controls label:hover{
-    opacity: 1;
+    &:hover {
+        opacity: 1;
+    }
 }
 
 #slide1:checked ~ #controls label:nth-child(2),
@@ -809,7 +703,7 @@ section .title {
 #slide3:checked ~ #controls label:nth-child(4),
 #slide4:checked ~ #controls label:nth-child(5),
 #slide5:checked ~ #controls label:nth-child(6),
-#slide6:checked ~ #controls label:nth-child(7){
+#slide6:checked ~ #controls label:nth-child(7) {
     background: url(images/right-arrow.png) no-repeat;
     float: right;
     margin: 0 -70px 0 0;
@@ -821,19 +715,19 @@ section .title {
 #slide3:checked ~ #controls label:nth-last-child(5),
 #slide4:checked ~ #controls label:nth-last-child(4),
 #slide5:checked ~ #controls label:nth-last-child(3),
-#slide6:checked ~ #controls label:nth-last-child(2){
+#slide6:checked ~ #controls label:nth-last-child(2) {
     background: url(images/left-arrow.png) no-repeat;
     float: left;
     margin: 0 0 0 -70px;
     display: block;
 }
 
-#bullets{
+#bullets {
     margin: 250px 0 0;
     text-align: center;
 }
 
-#bullets label{
+#bullets label {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -847,7 +741,7 @@ section .title {
 #slide3:checked ~ #bullets label:nth-child(3),
 #slide4:checked ~ #bullets label:nth-child(4),
 #slide5:checked ~ #bullets label:nth-child(5),
-#slide6:checked ~ #bullets label:nth-child(6){
+#slide6:checked ~ #bullets label:nth-child(6) {
     background: #fff;
 }
 
@@ -872,19 +766,15 @@ section .title {
     }
  }
 
-#slides .inner{
+#slides .inner {
     width: 600%;
 }
 
-#slides .slide{
+#slides .slide {
     width: 16.6%;
 }
 
 /* Contact */
-
-.contact .title span {
-    color: #c46f0e;
-}
 
 .contact .contact-content .left {
     border-radius: 20px;
@@ -1160,26 +1050,3 @@ footer {
         font-size: 12px;
     }
 }
-
-/*custom scrollbar*/
-
-/* Works on Firefox */
-* {
-    scrollbar-width: thin;
-    scrollbar-color: black transparent;
-  }
-  
-  /* Works on Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 12px;
-  }
-  
-  *::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  
-  *::-webkit-scrollbar-thumb {
-    background-color: black;
-    border-radius: 20px;
-    border: 3px solid transparent;
-  }
