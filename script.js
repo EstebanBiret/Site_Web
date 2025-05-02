@@ -33,8 +33,6 @@ $(document).ready(function() {
         $('.menu-btn i').toggleClass("active");
     });
 
-    
-
     // code carousel framework 
     $('.carousel').owlCarousel({
         margin: 20,
