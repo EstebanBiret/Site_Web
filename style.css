@@ -30,34 +30,6 @@ html {
     white-space: nowrap;
     border: 0;
 }
-  
-/* Animation lors du scroll */
-
-.animation {
-    transform: translateX(400%);
-    transition: transform .8s ease;
-}
-  
-.animation:nth-of-type(even) {
-    transform: translateX(-400%);
-}
-  
-.animation.show {
-    transform: translateX(0);
-}
-
-.animation2 {
-    transform: translateX(-400%);
-    transition: transform .8s ease;
-}
-  
-.animation2:nth-of-type(even) {
-    transform: translateX(400%);
-}
-  
-.animation2.show {
-    transform: translateX(0);
-}
 
 /* Barre de scroll custom */
 
