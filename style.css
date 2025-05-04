@@ -218,15 +218,13 @@ section .title {
 .accueil {
     display: flex;
     background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/accueil.jpg);
-    /*TODO voir pk ça fait pixel sur telephone adapter*/
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     color: #fff;
     min-height: 500px;
     background-size: cover;
-    background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
 
