@@ -126,6 +126,7 @@ section .title {
 .navbar.sticky {
     padding: 15px 0;
     background: #c46f0e;
+    border-bottom: 2px solid black;
 }
 
 .navbar .max-width {
