@@ -176,7 +176,6 @@ section .title {
 /* Boutons menu + scroll top */
 
 .menu-btn {
-
     font-size: 23px;
     cursor: pointer;
     display: none;
@@ -219,6 +218,7 @@ section .title {
 .accueil {
     display: flex;
     background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/accueil.jpg);
+    /*TODO voir pk ça fait pixel sur telephone adapter*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -879,6 +879,7 @@ footer {
     }
     .menu-btn i.active:before {
         content: "\f00d";
+        color: white;
     }
     .navbar .menu {
         position: fixed;
